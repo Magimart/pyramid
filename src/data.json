@@ -1,0 +1,205 @@
+[
+  {
+     
+       "learnNumbers" : [
+                    
+                        {"_id": 1, "number": 1, "inWord": "one", "sound": " "}, {"_id": 2, "number": 2, "inWord": "two", "sound": " "}, 
+                        {"_id": 3, "number": 3, "inWord": "three", "sound": " "},{"_id": 4, "number": 4, "inWord": "four", "sound": " "}, 
+                        {"_id": 5, "number": 5, "inWord": "five", "sound": " "}, {"_id": 6, "number": 6, "inWord": "six", "sound": " "},
+                        {"_id": 7, "number": 7, "inWord": "seven", "sound": " "}, {"_id": 8, "number": 8, "inWord": "eight", "sound": " "},
+                        {"_id": 9, "number": 9, "inWord": "nine", "sound": " "}, {"_id": 10, "number": 10, "inWord": "ten", "sound": " "},
+
+                        {"_id": 11, "number": 11, "inWord": "eleven", "sound": " "}, {"_id": 12, "number": 12, "inWord": "twelve", "sound": " "}, 
+                        {"_id": 13, "number": 13, "inWord": "thirteen", "sound": " "},{"_id": 14, "number": 14, "inWord": "fourteen", "sound": " "}, 
+                        {"_id": 15, "number": 15, "inWord": "fifteen", "sound": " "}, {"_id": 16, "number": 16, "inWord": "sixteen", "sound": " "},
+                        {"_id": 17, "number": 17, "inWord": "seventeen", "sound": " "}, {"_id": 18, "number": 18, "inWord": "eighteen", "sound": " "},
+                        {"_id": 19, "number": 19, "inWord": "nineteen", "sound": " "}, {"_id": 20, "number": 20, "inWord": "twenty", "sound": " "}                                      
+         ] ,
+        "puzzleWithNumbers": [],
+        "sum": [],
+        "subract": [],
+        "divission": [],
+        "multiply": []    
+    }, 
+    {
+        "learnLetters":"letters",
+        "letters" : [
+                
+                 {
+                     "vowels": [
+                      {"letter": "a", "sound": " "}, {"letter": "e", "sound": " "}, {"letter": "i", "sound": " "}, {"letter": "o", "sound": " "}, {"letter": "u", "sound": " "}
+                   ] 
+                  },
+                  {
+                    "alphabet": [
+                            {"letter": "A", "sound": " "}, {"letter": "B", "sound": " "}, {"letter": "C", "sound": ""}, {"letter": "D", "sound": ""}, {"letter": "E", "sound": " "}, {"letter": "F", "sound": " "},
+                            {"letter": "G", "sound": " "}, {"letter": "H", "sound": " "}, {"letter": "I", "sound": ""}, {"letter": "J", "sound": " "}, {"letter": "K", "sound": " "},
+                            {"letter": "L", "sound": " "}, {"letter": "M", "sound": " "}, {"letter": "N", "sound": ""}, {"letter": "O", "sound": " "}, {"letter": "P", "sound": " "},
+                            {"letter": "Q", "sound": " "}, {"letter": "R", "sound": " "}, {"letter": "S", "sound": ""}, {"letter": "T", "sound": " "}, {"letter": "U", "sound": " "},
+                            {"letter": "V", "sound": " "}, {"letter": "W", "sound": " "}, {"letter": "X", "sound": ""}, {"letter": "Y", "sound": " "}, {"letter": "Z", "sound": " "}
+                    ]    
+                  }                                 
+       ] 
+    },
+    {
+      "imageCollection": [
+
+         {
+          "name":"sports",
+          "activity": [
+                       {"name": "cycling", "image": "🚴🏾‍♂️"} ,{"name": "surfing", "image": "🏄🏿‍♂️"},
+                      {"name": "arms-standing", "image": "🤸🏻‍♂️"} ,{"name": "golf", "image": "🏌️‍♀️"},
+                      {"name": "horse-ride", "image": "🏇🏿"} ,{"name": "baskeball", "image": "⛹🏽‍♀️"},
+                      {"name": "cycling", "image": "🚴🏾‍♂️"} ,{"name": "surfing", "image": "🏄🏿‍♂️"},
+                      {"name": "arms-standing", "image": "🤸🏻‍♂️"} ,{"name": "golf", "image": "🏌️‍♀️"},
+                      {"name": "horse-ride", "image": "🏇🏿"} ,{"name": "baskeball", "image": "⛹🏽‍♀️"},                  
+                          {"name": "cycling", "image": "🚴🏾‍♂️"} ,{"name": "surfing", "image": "🏄🏿‍♂️"},
+                      {"name": "arms-standing", "image": "🤸🏻‍♂️"} ,{"name": "golf", "image": "🏌️‍♀️"},
+                      {"name": "horse-ride", "image": "🏇🏿"} ,{"name": "baskeball", "image": "⛹🏽‍♀️"},
+                      {"name": "cycling", "image": "🚴🏾‍♂️"} ,{"name": "surfing", "image": "🏄🏿‍♂️"},
+                      {"name": "arms-standing", "image": "🤸🏻‍♂️"} ,{"name": "golf", "image": "🏌️‍♀️"},
+                      {"name": "horse-ride", "image": "🏇🏿"} ,{"name": "baskeball", "image": "⛹🏽‍♀️"}
+           ],
+          "balls": [
+                      {"name":"volleyball", "image":"🏐"} , {"name": "tennis", "image": "🥎"} ,{"name": "football", "image": "⚽️"} ,
+                     {"name": "basketball", "image": "🏀"} ,{"name": "baseball", "image": "🏈"},
+                     {"name":"volleyball", "image":"🏐"} , {"name": "tennis", "image": "🥎"} ,{"name": "football", "image": "⚽️"} ,
+                     {"name": "basketball", "image": "🏀"} ,{"name": "baseball", "image": "🏈"},
+                     {"name":"volleyball", "image":"🏐"} , {"name": "tennis", "image": "🥎"} ,{"name": "football", "image": "⚽️"} ,
+                     {"name": "basketball", "image": "🏀"} ,{"name": "baseball", "image": "🏈"},
+                     {"name":"volleyball", "image":"🏐"} , {"name": "tennis", "image": "🥎"} ,{"name": "football", "image": "⚽️"} ,
+                     {"name": "basketball", "image": "🏀"} ,{"name": "baseball", "image": "🏈"},
+                     {"name":"volleyball", "image":"🏐"} , {"name": "tennis", "image": "🥎"} ,{"name": "football", "image": "⚽️"} ,
+                     {"name": "basketball", "image": "🏀"} ,{"name": "baseball", "image": "🏈"},
+                     {"name":"volleyball", "image":"🏐"} , {"name": "tennis", "image": "🥎"} ,{"name": "football", "image": "⚽️"} ,
+                     {"name": "basketball", "image": "🏀"} ,{"name": "baseball", "image": "🏈"}
+          ]         
+        },
+         {
+           "name":"transportation",
+           "meansOfTransport": [
+                        {"name": "bus", "image": "🚐"} ,{"name": "trolleybus", "image": "🚎"},
+                        {"name": "taxi", "image": "🚕"} ,{"name": "police-car", "image": "🚓"},
+                        {"name": "car", "image": "🚗"},{"name": "coming-taxi", "image": "🚖"},
+                        {"name": "ambulence", "image": "🚑 "} ,{"name": "firetruck", "image": "🚒"},
+                        {"name": "transport", "image": "🚛"} ,{"name": "van", "image": "🚚"},
+                        {"name": "train", "image": "🚆"} ,{"name": "aeroplane", "image": "✈️"},
+                        {"name": "rocket", "image": "🚀"} ,{"name": "hellecopter", "image": "🚁"},
+                        {"name": "tram", "image": "🚟"} ,{"name": "electric-train", "image": " 🚅"},
+                        {"name": "ship", "image": "🛳"} ,{"name": "train-head", "image": "🚂"},
+                        {"name": "scooter", "image": "🛵"} ,{"name": "racing-bike", "image": " 🏍"},
+                        {"name": "bicycle", "image": "🚲"} ,{"name": "tracktor", "image": "🚜"},
+                        {"name": "city-scooter", "image": "🛴"} ,{"name": "speed-boat", "image": "🚤"},
+                        {"name": "golf-car", "image": "🛺"}
+             ]          
+         },
+         {
+           "name": "plants",
+           "trees": [
+                      {"name": "chrismass-tree", "image": "🌲"} ,{"name": "rice", "image": "🌾"},
+                      {"name": "sunflower", "image": "🌻 "},{"name": "bouquet", "image": "💐"},
+                      {"name": "flower", "image": "🌷"} ,{"name": "palm-tree", "image": "🌴"},
+                      {"name": "bush", "image": "🦚"} ,{"name": "mushrooms", "image": "🍄"},
+                      {"name": "rose", "image": "🌹"} ,{"name": "plantpot", "image": "🎍"}, 
+                      {"name": "cactus", "image": "🌵"},
+                      {"name": "chrismass-tree", "image": "🌲"} ,{"name": "rice", "image": "🌾"},
+                      {"name": "sunflower", "image": "🌻 "},{"name": "bouquet", "image": "💐"},
+                      {"name": "flower", "image": "🌷"} ,{"name": "palm-tree", "image": "🌴"},
+                      {"name": "bush", "image": "🦚"} ,{"name": "mushrooms", "image": "🍄"},
+                      {"name": "rose", "image": "🌹"} ,{"name": "plantpot", "image": "🎍"}, 
+                      {"name": "cactus", "image": "🌵"}  
+           ],
+           "fruits": [
+                      {"name": "apple", "image": "🍎"}, {"name":"mango", "image":"🥭"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"banana", "image":"🍌"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"strawberry", "image":"🍓"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"banana", "image":"🍌"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"peach", "image":"🍑"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"banana", "image":"🍌"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"mango", "image":"🥭"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"banana", "image":"🍌"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"peach", "image":"🍊"}, {"name": "orange", "image": "🍊"},
+                      {"name": "apple", "image": "🍎"}, {"name":"pinneapple", "image":"🍍"}, {"name": "orange", "image": "🍊"}
+
+
+            ] ,
+            "vegetables": [
+                      {"name": "ovacado", "image": "🥑"}, {"name": "tomato", "image": "🍅"},
+                      {"name": "brocculli", "image": "🥦"},  {"name": "kiwi", "image": "🥝"},
+                      {"name": "egg-plant", "image": "🍆"}, {"name": "coconut", "image": "🥥"},
+                      {"name": "cuccumber", "image": "🥒"}, {"name": "spinat", "image": "🥬"},
+                      {"name": "chilli", "image": "🌶"}, {"name": "carrot", "image": "🥕"},
+                      {"name": "maize", "image": "🌽"}, {"name": "sweet-potatoes", "image": "🍠"},
+                      {"name": "onion", "image": "🧅"}, {"name": "irish-potatoes", "image": "🥔"},
+                      {"name": "garlic", "image": "🧄"},
+                      {"name": "onion", "image": "🧅"}, {"name": "irish-potatoes", "image": "🥔"},
+                      {"name": "garlic", "image": "🧄"},
+                      {"name": "onion", "image": "🧅"}, {"name": "irish-potatoes", "image": "🥔"},
+                      {"name": "garlic", "image": "🧄"}
+            ]   
+         },
+         {
+           "name":"living-things",
+           "birds": [
+                      {"name": "parrot", "image": "🦜"} ,{"name": "duck", "image": "🦢"},
+                      {"name": "cock", "image": "🐓"} ,{"name": "flamingo", "image": "🦩"},
+                      {"name": "goose", "image": "🦃"},{"name": "owl", "image": "🦉"},
+                      {"name": "parrots", "image": "🐦"},{"name": "wood-peaker", "image": "🦆"},
+                      {"name": "chicks", "image": "🐤"},{"name": "eagle", "image": "🦅"},
+                      {"name": "chick", "image": "🐥"},{"name": "bat", "image": "🦇"},
+                      {"name": "cock-head", "image": "🐔"},{"name": "hash-chick", "image": "🐣"},
+                      {"name": "pinguin", "image": "🐧"},{"name": "snowman", "image": "⛄️"},
+                      {"name": "cock-head", "image": "🐔"},{"name": "hash-chick", "image": "🐣"},
+                      {"name": "pinguin", "image": "🐧"},{"name": "snowman", "image": "⛄️"},
+                      {"name": "pinguin", "image": "🐧"},{"name": "snowman", "image": "⛄️"},
+                      {"name": "cock-head", "image": "🐔"},{"name": "hash-chick", "image": "🐣"},
+                      {"name": "pinguin", "image": "🐧"},{"name": "snowman", "image": "⛄️"}
+            ],
+            "insects": [
+                        {"name": "beettle", "image": "🐞"} ,{"name": "mosquito", "image": "🦟 "},
+                        {"name": "spider", "image": "🕷"} ,{"name": " ", "image": "🐜"},
+                        {"name": "buttterfly", "image": "🦋"} ,{"name": "bees", "image": "🐝"},
+                        {"name": "grasshopper", "image": "🦗"},
+                        {"name": "beettle", "image": "🐞"} ,{"name": "mosquito", "image": "🦟 "},
+                        {"name": "spider", "image": "🕷"} ,{"name": " ", "image": "🐜"},
+                        {"name": "buttterfly", "image": "🦋"} ,{"name": "bees", "image": "🐝"},
+                        {"name": "grasshopper", "image": "🦗"},
+                        {"name": "buttterfly", "image": "🦋"} ,{"name": "bees", "image": "🐝"},
+                        {"name": "grasshopper", "image": "🦗"},
+                        {"name": "buttterfly", "image": "🦋"} ,{"name": "bees", "image": "🐝"},
+                        {"name": "grasshopper", "image": "🦗"},
+                        {"name": "buttterfly", "image": "🦋"} ,{"name": "bees", "image": "🐝"},
+                        {"name": "grasshopper", "image": "🦗"}
+            ],
+            "animals"  :[
+                          {"name": "gorilla", "image": "🦍"} ,{"name": "elephant", "image": "🐘"},
+                          {"name": "leopard", "image": "🐈"} ,{"name": "pig", "image": "🐖"},
+                          {"name": "rabbit", "image": "🐇"} ,{"name": " ", "image": "🐄"},
+                          {"name": "squirrel", "image": "🐿"} ,{"name": " ", "image": "🦮"},
+                          {"name": "squirrel", "image": "🦏"} ,{"name": " ", "image": "🐪"},
+                          {"name": "squirrel", "image": "🐏"} ,{"name": " ", "image": "🐃"},
+                          {"name": "squirrel", "image": "🦙"} ,{"name": " ", "image": "🦄"},
+                          {"name": "squirrel", "image": "🐩"} ,{"name": " ", "image": "🐐"},
+                          {"name": "squirrel", "image": "🐎"} ,{"name": " ", "image": "🦌"},
+                          {"name": "squirrel", "image": "🦘"} ,{"name": " ", "image": " "},
+                          {"name": "squirrel", "image": "🦓"} ,{"name": " ", "image": "🦛"},
+                          {"name": "squirrel", "image": "🐩"} ,{"name": " ", "image": "🐐"},
+                          {"name": "squirrel", "image": "🐎"} ,{"name": " ", "image": "🦌"},
+                          {"name": "squirrel", "image": "🦘"} ,{"name": " ", "image": " "},
+                          {"name": "squirrel", "image": "🦓"} ,{"name": " ", "image": "🦛"}
+              ]        
+         } 
+      ]
+    }
+
+
+   
+]
+
+
+
+
+
+
+
+

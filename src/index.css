@@ -1,0 +1,139 @@
+@import url('https://rsms.me/inter/inter.css');
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  li {
+    @apply p-4
+  }
+
+  button {
+    @apply text-white border bg-indigo-600 border-indigo-600
+    hover:bg-transparent hover:text-indigo-600 rounded-md
+  }
+}
+
+html,
+body,
+#root,
+.bg,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+body {
+  /* background: #171717; */
+  font-family: 'Inter var', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+   
+} */
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #10133be9;
+    color:rgb(81, 29, 29);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bgMain {
+  position: absolute;
+  background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
+}
+
+h1 {
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  font-weight: 500;
+  font-size: 3em;
+  margin: 0;
+  color: peru;
+  line-height: 0.6em;
+  letter-spacing: .5px;
+  text-align: left;
+}
+
+
+h1 > span {
+  white-space: pre;
+}
+
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(63, 12, 88, 0.25) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+span.header {
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  width: 500px;
+  transform: translate3d(0, -50%, 0);
+  font-size: 9em;
+  line-height: 0.9em;
+  pointer-events: none;
+  top: 350px;
+  left: 50px;
+}
+
+span.header-left {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  transform: translate3d(0, -50%, 0);
+  line-height: 1em;
+  top: 200px;
+  left: 60px;
+  font-size: 4em;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  z-index: 1;
+}
+
+a.top-left {
+  top: 60px;
+  left: 60px;
+}
+
+a.top-right {
+  top: 60px;
+  right: 60px;
+}
+
+a.bottom-left {
+  bottom: 60px;
+  left: 60px;
+}
+
+a.bottom-right {
+  bottom: 60px;
+  right: 60px;
+}
+
+
