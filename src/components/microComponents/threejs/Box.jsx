@@ -8,6 +8,7 @@ import {
 import * as THREE from 'three';
 import { OrbitControls, Line } from '@react-three/drei';
 import { Background, Bulb, BoxCube, Floor, ColorPIcker } from "./MicroComponents";
+import Dragable  from "./Dragable";
 
   extend({OrbitControls})
 
@@ -24,9 +25,10 @@ import { Background, Bulb, BoxCube, Floor, ColorPIcker } from "./MicroComponents
    }
    
 
-
  export function AppCube() {
 
+
+     
      const axesHelper = new THREE.AxesHelper( [8] );
           // scene.add( axesHelper );
          const  handleChangeColor = (e) => {
@@ -44,6 +46,7 @@ import { Background, Bulb, BoxCube, Floor, ColorPIcker } from "./MicroComponents
 
              <div   style={{  height:"100vh", width: "100vw" }}>
                 <ColorPIcker handleChangeColor={handleChangeColor} />
+
                <Canvas 
                     // dpr={[1.5, 2]} linear shadows 
                           camera={{position: [7,7,7]}} 
@@ -51,23 +54,24 @@ import { Background, Bulb, BoxCube, Floor, ColorPIcker } from "./MicroComponents
                    <fog attach="fog" args={['white', 1, 10]}/> 
                      <ambientLight intensity={6.2} />
                      <Bulb position={[0,5,0]} />
-                     <Orbit/>
+                     {/* <Orbit/> */}
                      <axesHelper args={[5]}/>
                        <Suspense fallback={null} >
                             <Background />
                        </Suspense>
                        <Line points={[[0, 0, 0], [0, 10, 0]]} color="green"/>
-
-                       <Suspense fallback={null} >
-                            <BoxCube position={[-2,1,0]}/>
-                       </Suspense>
-                       
-                       <Suspense fallback={null} >
-                            <BoxCube position={[2,1,0]}/>
-                       </Suspense>
+                       <Dragable>
+                              <Suspense fallback={null} >
+                                   <BoxCube position={[-2,1,0]}/>
+                              </Suspense>
+                              
+                              <Suspense fallback={null} >
+                                   <BoxCube position={[2,1,0]}/>
+                              </Suspense>                    
+                       </Dragable>
   
-                      <Floor position={[0, -2,0]}/>
-                      {/* <directionalLight /> */}
+                      <Floor position={[0, -55, -50]}/>
+                      <directionalLight />
                </Canvas>
             </div>
       );

@@ -33,7 +33,7 @@ import { OrbitControls} from '@react-three/drei';
    
 
 
-  export const BoxCube = (props) => {
+export const BoxCube = (props) => {
 
       const ref = useRef();
       const texture = useLoader(TextureLoader, imageTexture)
@@ -104,11 +104,11 @@ import { OrbitControls} from '@react-three/drei';
                         />                      
                     </mesh>
         );
- }
+}
 
 
 
-  export const Background = () => {
+export const Background = () => {
 
      const {gl} = useThree()
      const texture = useLoader(TextureLoader, bgTexture);
@@ -122,10 +122,11 @@ import { OrbitControls} from '@react-three/drei';
 
        }, [gl, texture]);
 
-    
             return(
                 <primitive
                        attach="background"
+                        args={[5, 1, 10]}
+                      //  args={[20, 1, 10]}
                       // object={texture}
                        object={formatted && formatted.texture}
                 />
@@ -137,10 +138,10 @@ export const Floor = props => {
 
     return (
       <mesh {...props} receiveShadow>
-        <boxBufferGeometry args={[20, 1, 10]}/>
-        <meshPhysicalMaterial />
-      </mesh>
-    
+        {/* <boxBufferGeometry args={[20, 1, 10]}/> */}
+        <boxBufferGeometry args={[340, 1, 20]}/>
+        <meshPhysicalMaterial/>
+      </mesh>   
     );
   }
 
@@ -150,7 +151,7 @@ export const Bulb = (props) => {
     return (
         <mesh {...props}>
             <pointLight castShadow/>
-            <sphereBufferGeometry args={[0.3]} />
+            <sphereBufferGeometry args={[0.3, 2]} />
             <meshPhongMaterial emissive="yellow" emissiveIntensity={90}/>
         </mesh>
     )
@@ -160,10 +161,11 @@ export const Bulb = (props) => {
 export const ColorPIcker = ({handleChangeColor}) => {
     return (
          <>
-                   <div className="absolute top-20 left-10 z-10 flex flex-col">
-                    <div style={{position: "relative", background: "green", height: "4em", width: "4em" }} onClick={handleChangeColor} >11 </div>
-                    <div style={{position: "relative", background: "yellow", height: "4em", width: "4em" }} onClick={handleChangeColor}> 22</div>
-                    <div style={{position: "relative", background: "red", height: "4em", width: "4em" }}  onClick={handleChangeColor}>33 </div>
+                   <div className="absolute top-32 left-10 z-10 flex flex-col">
+                    <h3 className="bg-black text-white p-2">select box and apply any colors</h3>
+                    <div style={{position: "relative", background: "green", height: "4em", width: "4em" }} onClick={handleChangeColor} > </div>
+                    <div style={{position: "relative", background: "yellow", height: "4em", width: "4em" }} onClick={handleChangeColor}> </div>
+                    <div style={{position: "relative", background: "red", height: "4em", width: "4em" }}  onClick={handleChangeColor}></div>
             </div>
          </>
     )
