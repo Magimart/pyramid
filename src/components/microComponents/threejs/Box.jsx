@@ -20,7 +20,10 @@ import Dragable  from "./Dragable";
     //  camera.rotation.set(deg2rad(-30), 0, 0);
     //   camera.position.set(0, 6, 6)
             return (
-                    <OrbitControls args={[camera, gl.domElement]}/>
+                    <OrbitControls 
+                       attach="orbitControls"
+                       args={[camera, gl.domElement]}
+                    />
             ) 
    }
    
@@ -54,7 +57,7 @@ import Dragable  from "./Dragable";
                    <fog attach="fog" args={['white', 1, 10]}/> 
                      <ambientLight intensity={6.2} />
                      <Bulb position={[0,5,0]} />
-                     {/* <Orbit/> */}
+                     <Orbit/>
                      <axesHelper args={[5]}/>
                        <Suspense fallback={null} >
                             <Background />

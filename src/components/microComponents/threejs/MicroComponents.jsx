@@ -86,8 +86,7 @@ export const BoxCube = (props) => {
                            onPointerLeave={HandlePointerLeave}
                     >
                         <boxBufferGeometry args={[1, 1, 1]}/> 
-                        {/* <sphereBufferGeometry args={[1, 100, 100]}  /> */}
-
+                        <sphereBufferGeometry args={[1, 100, 100]}/>
                         <meshPhysicalMaterial
                                  map={texture} 
                                 //  color="gray" 

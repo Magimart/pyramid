@@ -10,20 +10,43 @@ extend({DragControls});
 
 
       const domRef = useRef()
-      const {camera, gl} = useThree();
-      const [children, setDragableValues] = useState([])
+      const eventControlsRef = useRef()
+
+      const {camera, gl, scene} = useThree(); // get the scene
+      const [children, setChildren] = useState([])
+      const [eventControls, setEventControls] = useState([])
 
 
 
         useEffect(() => {
-             setDragableValues(domRef.current.children)
+          setChildren(domRef.current.children)
         }, [])
 
-        console.log(children)
 
+     //    Pass the events to the stte component
+
+
+        useEffect(() => {
+
+          eventControlsRef.current.addEventListener("hoveron", (e) => {
+               console.log(scene);
+            return   scene.orbitControls.enabled = false;
+          })
+
+          eventControlsRef.current.addEventListener("hoveroff", (e) => {
+               console.log(scene);
+            return   scene.orbitControls.enabled = true;
+          })
+
+     }, [children])
+
+console.log(eventControls)
       return (
            <group ref={domRef}> 
-               <dragControls args={[children, camera, gl.domElement]}/>
+               <dragControls 
+                     ref={eventControlsRef}
+                     args={[children, camera, gl.domElement]}
+               />
                {props.children}
            </group>
       )
