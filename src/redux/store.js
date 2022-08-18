@@ -4,12 +4,15 @@ import {   createStore,
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { combineReducers } from 'redux';
-
+import { 
+          applyColorReducers,
+ } from './reducers/applyColorReducers';
 
 
 const reducer = combineReducers({
           //add combined reducers
-                                      
+          colorPallet: applyColorReducers,
+                                              
 })
 
 

@@ -1,0 +1,12 @@
+export const APPLY_COLOR_SUCCESS = "APPLY_COLOR_SUCCESS";
+export const APPLY_COLOR_FAIL = "APPLY_COLOR_FAIL";
+
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+
+
+
+
+
+
+

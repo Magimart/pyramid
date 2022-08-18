@@ -1,55 +1,40 @@
 import { extend, useThree } from "@react-three/fiber";
 import React, {useRef, useEffect, useState} from "react";
+import { useDispatch } from "react-redux";
 import {DragControls } from "three/examples/jsm/controls/DragControls"
+import { getDragEvent } from "../../../utils/applyColor";
 
-extend({DragControls});
-
-
-
- const Dragable = (props) =>{
+ extend({DragControls});
 
 
-      const domRef = useRef()
-      const eventControlsRef = useRef()
+const Dragable = (props) =>{
 
-      const {camera, gl, scene} = useThree(); // get the scene
-      const [children, setChildren] = useState([])
-      const [eventControls, setEventControls] = useState([])
+     const domRef = useRef()
+     const eventControlsRef = useRef()
 
-
-
-        useEffect(() => {
-          setChildren(domRef.current.children)
-        }, [])
+     const {camera, gl, scene} = useThree(); // get the scene
+     const [allMesh, setChildren] = useState([])
+     // const [eventControls, setEventControls] = useState([])
 
 
-     //    Pass the events to the stte component
+               useEffect(() => {
+                    setChildren(domRef.current.children)
+               }, [])
 
 
-        useEffect(() => {
+               useEffect(async() => {
+                   getDragEvent(eventControlsRef, scene)
+               }, [allMesh])
 
-          eventControlsRef.current.addEventListener("hoveron", (e) => {
-               console.log(scene);
-            return   scene.orbitControls.enabled = false;
-          })
-
-          eventControlsRef.current.addEventListener("hoveroff", (e) => {
-               console.log(scene);
-            return   scene.orbitControls.enabled = true;
-          })
-
-     }, [children])
-
-console.log(eventControls)
-      return (
-           <group ref={domRef}> 
-               <dragControls 
-                     ref={eventControlsRef}
-                     args={[children, camera, gl.domElement]}
-               />
-               {props.children}
-           </group>
-      )
+          return (
+                    <group ref={domRef}> 
+                         <dragControls 
+                              ref={eventControlsRef}
+                              args={[allMesh, camera, gl.domElement]}
+                         />
+                         {props.children}
+                    </group>
+          )
 }
 
 export default Dragable;

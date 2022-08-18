@@ -3,14 +3,11 @@ import React, { useEffect, useState } from 'react';
 import Header from './components/headerComponents/Header';
 import { Route, Switch } from "react-router-dom";
 import './index.css';
-import { AppCube } from './components/microComponents/threejs/Box';
-
+import { AppMain } from './components/microComponents/threejs/AppMain';
 
 
     function App(props) {
     
-
-
       return (
         <React.Fragment>
         <div className="AppWra grid grid-flow-row
@@ -33,8 +30,7 @@ import { AppCube } from './components/microComponents/threejs/Box';
                                  
                         <Route 
                            path="/"
-                          render={() => <AppCube /> }
-
+                           render={() => <AppMain /> }
                         />
                   </Switch>
 
@@ -43,7 +39,7 @@ import { AppCube } from './components/microComponents/threejs/Box';
                             z-10 bg-zinc-200m bg-opacity-20
                           "
                    >
-                     ---
+                     -
                  </div> 
             </div>
       </React.Fragment>
