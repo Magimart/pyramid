@@ -1,28 +1,25 @@
-import {   createStore, 
-   applyMiddleware 
-} from 'redux';
+import { createStore, applyMiddleware} from "redux";
+import { combineReducers } from "redux";
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { combineReducers } from 'redux';
 import { 
-          applyColorReducers,
+           applyColorReducers, increaseDescreaseScaleReducers
  } from './reducers/applyColorReducers';
+     
+ const middlware = [thunk];
 
 
-const reducer = combineReducers({
-          //add combined reducers
-          colorPallet: applyColorReducers,
-                                              
-})
+const rootReducer = combineReducers({
+       colorPallet: applyColorReducers,
+       scaleEvent: increaseDescreaseScaleReducers,
+
+});
 
 
-let  initialState = {              
-}
+const store = createStore(
+   rootReducer,
+   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   composeWithDevTools(applyMiddleware(...middlware))
+ );
 
-       
-
-const middlware = [thunk];
-const store = createStore(reducer,  composeWithDevTools(applyMiddleware(...middlware)))
-
-//_______________reconfigured
 export default store;

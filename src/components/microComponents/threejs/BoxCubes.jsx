@@ -1,83 +1,62 @@
-import React, {useRef, useEffect, useCallback, useMemo,Suspense} from "react";
+import React, {  useCallback} from "react";
 import {
           useLoader,
-          extend,
-          useThree
+          
        } from '@react-three/fiber';
 import imageTexture from "../../../assets/fredo2.jpg";
 import { TextureLoader} from 'three';
 import * as THREE from 'three';
-import { OrbitControls} from '@react-three/drei';
 import {  useBox } from '@react-three/cannon'
+import { useDispatch} from "react-redux";
+import { increaseDescreaseScaleActions,  clearErrors } from "../../../redux/actions/applyColorActions";
+import { useState } from "react";
+import { handlePointerEnter, handlePointerLeave } from "../../../utils/applyColor";
 
-extend({OrbitControls})
 
-  const deg2rad = degrees => degrees * (Math.PI / 180);
-  
+// extend({OrbitControls})
 
-export const BoxCube = (props) => {
+const BoxCube = (props) => {
 
-      // const ref = useRef();
-   
-      const [ref, api] = useBox(() => ({mass: 0.01, ...props }))
-      const texture = useLoader(TextureLoader, imageTexture)       
-        //  useFrame((state) => {
-        //          ref.current.rotation.y += 0.01;
-        //   });
+   const [ref, api] = useBox(() => ({mass: 0.01, ...props }))
+   const texture = useLoader(TextureLoader, imageTexture)  
+   const dispatch = useDispatch();
+   const [activeMesh, setActiveMesh] = useState({});
 
-          const decreaseScale = (object) => {
-             object.scale.x  = 1
-             object.scale.y  = 1
-             object.scale.z  = 1 
-          }
 
-           const HandleBoxClick = (e) => {
-                // let activeWindowMesh = e.object.active;
-               e.object.active = true;
-              let windowActiveMesh = e.object;
-              if(window.activeMesh){
-                decreaseScale(window.activeMesh)
-                window.activeMesh.active = false;
-              }
-              window.activeMesh = windowActiveMesh; // sets object to global on window                        
-            } 
+           const handleBoxClick = useCallback((e) => {
+                     dispatch(increaseDescreaseScaleActions(e))
+                     dispatch(clearErrors())                       
+            }, [dispatch, clearErrors]) 
+           
+            console.log(api)
 
-   
-            const handlePointerEnter = (e) => {
-                 e.object.scale.x  = 1.5
-                 e.object.scale.y  = 1.5
-                 e.object.scale.z  = 1.5
-            } 
-            const HandlePointerLeave = (e) => {
-                      if(!e.object.active){
-                         decreaseScale(e.object)     
-                      }
-            } 
 
         return (
                  //<mesh rotation={[90, 0, 20]}>
-                    <mesh ref={ref}
+                 <>
+                     <mesh ref={ref}
                            api={api}
                            {...props}
                            castShadow
-                          //  receiveShadow
-                           //onClick={(e) => HandleBoxClick(e)}
-                           onPointerDown={HandleBoxClick}
+                           //  receiveShadow
+                           //  onPointerDown={(e) =>setActiveMesh(e)}
+                           onPointerDown={handleBoxClick}
                            onPointerEnter={handlePointerEnter}
-                           onPointerLeave={HandlePointerLeave}
-                    >
-                        <boxBufferGeometry args={[1, 1, 1]}/> 
+                           onPointerLeave={handlePointerLeave}
+                        >
+                        <boxBufferGeometry args={[1.2, 1.2, 1.2]}/> 
                         <meshPhysicalMaterial
                                  map={texture} 
                                  side={THREE.DoubleSide}                   
-                       />                      
-                    </mesh>
+                        />                      
+                     </mesh>
+                  </>
 
         );
 }
 
 
-
+export default BoxCube;
 
 
 

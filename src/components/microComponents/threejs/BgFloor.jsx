@@ -1,7 +1,5 @@
 import React, {useRef, useEffect, useCallback, useMemo,Suspense} from "react";
 import {
-          Canvas,
-          useFrame,
           useLoader,
           extend,
           useThree
@@ -49,8 +47,6 @@ export const Floor = props => {
             api={api} {...props} 
             receiveShadow
       >
-        {/* <boxBufferGeometry args={[20, 1, 12]}/> */}
-        {/* <boxBufferGeometry args={[40, -6, 29]}/> */}     
         <boxBufferGeometry args={[40, 0, 19]}/>         
         <meshPhysicalMaterial color={""}/>
         {props.children} 

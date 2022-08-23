@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './components/headerComponents/Header';
 import { Route, Switch } from "react-router-dom";
 import './index.css';
-import { AppMain } from './components/microComponents/threejs/AppMain';
-
+import AppMain from './components/microComponents/threejs/AppMain';
 
     function App(props) {
     
