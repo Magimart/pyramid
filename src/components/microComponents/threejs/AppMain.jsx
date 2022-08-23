@@ -34,12 +34,10 @@ extend({OrbitControls})
                                                   <ambientLight intensity={1.5} />
                                                   <Bulb position={[0,7,0]} />
                                                   <Orbit/>
-                                                  <axesHelper args={[30]}/>
                                                   <Physics>
                                                        <Suspense fallback={null} >
                                                             <Background />
                                                        </Suspense>
-                                                       <Line points={[[0, -10, 0], [0, 20, 0]]} color="red"/>                                                       
                                                        <Dragable>                                                          
                                                             <Suspense fallback={null} >
                                                                  <BoxCube position={[-5, (Math.random() * 7), -2]}/>
